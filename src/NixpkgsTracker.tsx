@@ -135,6 +135,7 @@ export function NixpkgsTracker() {
   onMount(() => {
     setSelectedBranches(getSavedBranches());
     setToken(getToken());
+    if (initialPR) handleCheck();
   });
 
   const [token, setToken] = createSignal("");
